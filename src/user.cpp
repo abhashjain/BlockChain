@@ -36,7 +36,7 @@ using namespace Pistache::Http;
 //global variables
 BlockChain bc1;
 vector<Block> blk_vec;
-std::vector<string> base = {"A", "B", "C", "D"};
+std::vector<string> base = {"A", "B", "C", "D", "E", "F" , "G" , "H" , "I" , "J" , "K" , "L" , "M" , "N" , "O" , "P" , "Q" , "R" , "S" , "T" , "U" , "V", "X", "Y", "Z"}; 
 
 struct NoBlockchainException : public exception {
    const char * what () const throw () {

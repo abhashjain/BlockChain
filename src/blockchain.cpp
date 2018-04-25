@@ -45,7 +45,7 @@ vector<Block> BlockChain::getBlockChain() {
 BlockChain::BlockChain(const int check){
 	//creating genesis block with default transactions
 	//log_info("Creating genesis block for blockchain");
-	std::set<std::string> base = {"A", "B", "C", "D"};
+	std::set<std::string> base = {"A", "B", "C", "D", "E", "F" , "G" , "H" , "I" , "J" , "K" , "L" , "M" , "N" , "O" , "P" , "Q" , "R" , "S" , "T" , "U" , "V", "X", "Y", "Z"};
 	std::set<std::string>::iterator it;
 	Block bl;
 	for(it = base.begin(); it != base.end(); it++){
