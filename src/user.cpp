@@ -115,7 +115,7 @@ std::vector<std::string> getInputIds(std::vector<Tx> inputs){
 string autoTxGenerator(){
 	//randomly choose a user
 	srand(time(NULL));
-	int i = rand()%4;
+	int i = rand()%base.size();
 	string user = base.at(i);
     vector<Tx> inputs = getValidTx(user);
 	vector<string> input_ids = getInputIds(inputs);
@@ -126,7 +126,7 @@ string autoTxGenerator(){
 	int change = total - amount;
 	log_info("Total: " + to_string(total) + " Amount: " + to_string(amount) + " Change: " + to_string(change));
 	//choose a random receiver other than user
-	int j = rand()%4;
+	int j = rand()%base.size();
 	while(i == j){
 		j = rand()%4;
 	}
