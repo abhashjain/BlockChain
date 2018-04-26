@@ -1,0 +1,10 @@
+//for opening
+srun -n 16 -N 1 -p gtx480 --pty /bin/bash
+//for loading cuda and gpu modules
+
+module unload cuda
+module load pgi64
+
+//for compiling gpu code with cuda
+ pgc++ main.cpp -o main tx.cpp utility.cpp block.cpp blockchain.cpp  -std=c++11 -I ../include/ -acc -ta=tesla,cc20 -Minfo=accel
+//for compiling cpu code
